@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row mt-4 py-4">
+    {% for dato in datos%}
+    <div class="col-md-4 mx-auto">
+        <div class="card card-body">
+            <div class="card-header text-center">{{ dato[1] }}</div>
+            <img class="card-img-top p-2" src="src/uploads/{{dato[2]}}" alt="Imagen de perfil">
+            <a href="src/uploads/{{dato[2]}}" download="" class="btn btn-info"><i class="fas fa-download"></i> Descargar</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+DROP DATABASE crud_python;
+
+CREATE DATABASE crud_python;
+
+use crud_python;
+
+DROP TABLE IF EXISTS `imagen`;
+CREATE TABLE imagen (
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    photo VARCHAR(5000) NOT NULL
+);
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE users (
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(25) NOT NULL,
+    password VARCHAR(102) NOT NULL,
+    fullname VARCHAR(50) NOT NULL
+);
